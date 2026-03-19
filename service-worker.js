@@ -3,6 +3,8 @@ self.addEventListener('install', e => {
     caches.open('BP').then(cache => cache.addAll([
       '/',
       '/index.html',
+      "BP192.png",
+      "bp152",
     ]))
   );
 });
