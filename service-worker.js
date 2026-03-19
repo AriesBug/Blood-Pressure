@@ -1,24 +1,15 @@
-var dataCacheName = 'BearEatEverything';
-var cacheName = 'BearEatMama';
-var filesToCache = [
-  '/BP192',
-  '/bp152',
+const CACHE_NAME = 'v1-assets';
+const ASSETS_TO_CACHE = [
+  '/',
+  '/index.html',
+  'bp192.png', // Cache your specific icon files
+  'BP512.png'
 ];
 
-
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open('BP').then(cache => cache.addAll([
-      '/',
-      '/index.html',
-      "/BP192.png",
-      "/bp152",
-    ]))
-  );
-});
-
-self.addEventListener('fetch', e => {
-  e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request))
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(ASSETS_TO_CACHE);
+    })
   );
 });
