@@ -1,13 +1,20 @@
 {
-  "name": "Blood_Pressure",
+  "name": "BP APP",
   "short_name": "BP",
-  "description": "BloodPressureChecker",
-  "start_url": "/index.html",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#007bff",
+  "background_color": "#8d448d",
+  "theme_color": "#8d448d",
   "icons": [
-    { "src": "/icons/wow.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/icons/wew.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "BP192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "bp152.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
