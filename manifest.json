@@ -1,7 +1,7 @@
 {
-  "name": "Bookly",
-  "short_name": "Bookly",
-  "description": "Search and read books from Gutenberg and OpenLibrary.",
+  "name": "Blood_Pressure",
+  "short_name": "BP",
+  "description": "BloodPressureChecker",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
