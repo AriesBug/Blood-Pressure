@@ -1,3 +1,11 @@
+var dataCacheName = 'BearEatEverything';
+var cacheName = 'BearEatMama';
+var filesToCache = [
+  '/BP192',
+  '/bp152',
+];
+
+
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open('BP').then(cache => cache.addAll([
