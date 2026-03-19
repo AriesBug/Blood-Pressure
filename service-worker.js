@@ -4,7 +4,8 @@ self.addEventListener("install", function(e) {
             return cache.addAll([
 
                 "/index.html"
-                
+                "/bp512.png"
+                "/BP192.png"
             ]
         )}
     ));
