@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <center>
+    <div id = "PATIENTBOX">
+        <h1>Enter Patient Name</h1>
+        <input type="text" id = "patient" placeholder="Patient Name">
+    </div>
+
+    <div id = "DOCTORBOX">
+        <h1>Enter Doctor Name</h1>
+        <input type="text" id = "Doctor" placeholder="Doctor name">
+    </div>
+
+    <div id = "BPBOX">
+        <h1>Enter BP1 Name</h1>
+        <input type="text" id = "BP1" placeholder="BP1">
+    </div>
+    <br>
+    <button type = "submit" id="submit" onclick="check()" class="btn btn-danger">Submit</button>
+    <div id="Results">
+
+    </div>
+    </center>
+
+    <script>
+
+        function check(){
+            let BP1 = document.getElementById("BP1").value;
+            let Patient = document.getElementById("patient").value;
+            let Doctor = document.getElementById("Doctor").value;
+
+            if (BP1 >= 5){
+                document.getElementById("Results").innerHTML = "<h2>You are Diabetic</h2>";
+            }
+            else if (BP1 <= 5){
+                document.getElementById("Results").innerHTML = "<h2>You are Normal</h2>";
+            }
+        }
+    </script>
+</body>
+</html>
