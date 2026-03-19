@@ -1,12 +1,18 @@
-self.addEventListener("install", function(e) {
-    e.waitUntil(
-        caches.open("todo-cache").then(function(cache) {
-            return cache.addAll([
+const CACHE_NAME = 'v1_cache';
+const ASSETS = ['/', '/index.html', '/styles.css', '/BP192', 'bp512'];
 
-                "/index.html"
-                "/bp512.png"
-                "/BP192.png"
-            ]
-        )}
-    ));
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+  );
+});
+
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
+    })
+  );
 });
