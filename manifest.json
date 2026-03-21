@@ -2,17 +2,18 @@
   "name": "BP APP",
   "short_name": "BP",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#8d448d",
   "theme_color": "#8d448d",
   "icons": [
     {
-      "src": "bp192.png",
+      "src": "/bp192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "bp512.png",
+      "src": "/bp512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
