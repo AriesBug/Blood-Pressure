@@ -1,7 +1,7 @@
 {
   "name": "BP APP",
   "short_name": "BP",
-  "start_url": "./index.html"
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#8d448d",
   "theme_color": "#8d448d",
