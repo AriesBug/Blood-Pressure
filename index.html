@@ -48,6 +48,8 @@
                 document.getElementById("Results").innerHTML = "<h2>You are Normal</h2>";
             }
         }
+
+        self.clients.claim();
         if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js')
