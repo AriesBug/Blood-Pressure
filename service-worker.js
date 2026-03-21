@@ -1,10 +1,10 @@
 self.addEventListener("install", function(e) {
     e.waitUntil(
-        caches.open("todo-cache").then(function(cache) {
+        caches.open("todo-cache-v2").then(function(cache) {
             return cache.addAll([
-                "/index.html",
-                "/BP192.png",
-                "/bp512.png"
+                "./index.html",
+                "./bp192.png",
+                "./152.png"
             ]);
         })
     );
